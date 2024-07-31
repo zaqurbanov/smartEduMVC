@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<%- include('./partials/head.ejs') %>
+
+<body class="host_version"> 
+	<!-- <div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div> -->
+    <!-- LOADER -->
+	<%- include('./partials/navbar.ejs')  %>
+
+	<!-- End header -->
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>DashBoard For<span class="m_1">All User</span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="row"> 
+                <div class="col-lg-12 blog-post-single">					
+					<div class="blog-author">
+						<div class="author-bio">
+							
+								
+									<ul>	
+										<li> <a href="/dashboard/user/<%= user.id %>" > <%= user.name %> </a></li>
+                                        <a href="/dashboard/user-delete/<%= user._id %>">Delete User</a>
+										<li><%= user.userRole.name %></li>
+
+										<form action="/dashboard/user/<%= user.id %>" method="post">
+										<select name="userRole" id="">
+											<% roles.forEach(role=>{ %>
+
+												<option value="<%=role.id %>"><%= role.name %></option>
+											<% }) %>
+										</select>
+										<input type="submit" value="submit">
+									</form>
+										
+
+									</ul>
+								
+							
+							
+							
+						</div>
+						
+					</div>
+					
+                </div><!-- end col -->
+            </div><!-- end row -->
+			<div class="row mt-5"> 
+        <!-- end col -->
+
+         <!-- end col -->	
+				                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="course-item mb-5">
+						<div class="image-blog">
+							<img src="images/blog_2.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="course-single.html" title="">Hotel Management</a></h2>
+							</div>
+							<div class="blog-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+						</div>
+					</div>
+                </div><!-- end col -->	
+			<!-- end col -->	
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	<%- include('./partials/footer.ejs') %>
+
+
+</body>
+</html>
