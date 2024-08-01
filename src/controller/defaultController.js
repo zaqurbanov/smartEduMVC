@@ -16,7 +16,7 @@ const getDefaultPage = async(req,res)=>{
     res.status(200).render('index',{
         pageName:"index",
         data:result.data,
-        counterData:counterData.data,
+        // counterData:counterData.data,
         changedPage
     })
   

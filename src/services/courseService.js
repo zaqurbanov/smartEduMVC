@@ -26,7 +26,7 @@ const createCourse = async (datas,user_id,category_id)=>{
                 description:datas.description,
                 category:category_id,
                 author:user_id
-                
+                 
             })
           return  Response.success("Created Succesfully",201,data)
         } catch (error) {
@@ -59,7 +59,7 @@ const updateCourse = async(data,id)=>{
         }
         const title = data.title || coursById.title;
         const description = data.description || coursById.description;
-
+ 
      const updatedData=   await Course_Model.create({
             title,
             description
