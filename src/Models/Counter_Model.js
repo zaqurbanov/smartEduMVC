@@ -9,7 +9,7 @@ const Counter_Model = new mongoose.Schema({
 
 
 
-})
-
+}) 
+ 
 
 module.exports = mongoose.model('Counter',Counter_Model)
